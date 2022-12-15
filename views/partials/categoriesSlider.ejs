@@ -1,0 +1,20 @@
+<section class="page-width categories-section mb-400">
+<ul class="custom-list bg-primary-1 categories-list">
+    <% categories.forEach(category => { %>
+    <li class="block text-center">
+        <a href="/categories/<%= category.id %>" class="aspect-ratio aspect-ratio--100 block mb-50 hover--zoom ">
+            <img src="<%= category.coverImagePath %>">
+        </a>
+        <strong class="text-primary-2 fs-400 text-primary-2 fw-semibold"><%= category.name %></strong>
+    </li>
+    <% }) %>
+    <li class="block text-center">
+        <a href="/categories/" class="aspect-ratio aspect-ratio--100 mb-50 block hover--zoom">
+            <div class="ratio-el fw-bold text-center flex w-100 h-100 bg-primary bg-primary-2 justify-center items-center fs-600 text-primary-1">
+                <p><%= categories.length %>+</p>
+            </div>
+        </a>
+        <strong class="text-primary-2 fs-400 text-primary-2 fw-semibold">View All</strong>
+    </li>
+</ul>
+</section>

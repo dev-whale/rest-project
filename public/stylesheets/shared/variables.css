@@ -1,0 +1,217 @@
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+:root {
+  --color-base-hue: 23rem;
+  --color-danger-hue-offset: 30rem;
+  --color-danger-hue: calc(var(--color-base-hue) - var(--color-danger-hue-offset));
+  --color-background-dark: hsl(var(--color-base-hue), 100%, 8%);
+  --color-background-light: hsl(var(--color-base-hue), 100%, 16%);
+  --color-text-light: hsl(var(--color-base-hue), 100%, 87%);
+
+
+
+
+/* ### layOut */
+--page-width-sm: 135rem;
+--page-width: 200rem;
+--page-width-padding: 5rem;
+
+
+--nav-collapsed-width: 6rem;
+--nav-width: 6rem;
+
+  /* ### Font-family */
+  --ff-body: 'Poppins', sans-serif;
+
+
+ /* ### Letter Spacings */
+  --ls-100: -0.015em;
+
+
+ /* ### Line Height */
+  --lh-100:  98.5%;
+
+ /* ### Colors
+  --clr-body: #FFF;
+  --clr-primary-1: #252525; 
+  --clr-primary-2: #FFF;
+  --clr-secondary-1: #F6F6F6;
+  --clr-secondary-2: #E6E6E6;
+  --clr-secondary-3: #E1E1E1;
+  --clr-accent-1: #FFA6A6;
+  --clr-accent-2: #E2F9B3;  
+
+  --clr-bg-body: #FFF;
+  --clr-bg-primary-1: #252525; 
+  --clr-bg-primary-2: #FFF;
+  --clr-bg-secondary-1: #F6F6F6;
+  --clr-bg-secondary-2: #E6E6E6;
+  --clr-bg-secondary-3: #E1E1E1;
+  --clr-bg-accent-1: #FFA6A6;
+  --clr-bg-accent-2: #E2F9B3;   */
+
+
+/* ### Font Sizes */
+  --fs-100: 1rem;
+  --fs-200: 1.2rem;
+  --fs-300: 1.4rem;
+  --fs-400: 1.6rem;
+  --fs-500: 1.8em;
+  --fs-600: 2.5rem;
+  --fs-700: 3rem;
+  --fs-800: 3.5rem;
+  --fs-900: 4rem;
+
+ /* ### Font Weights */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+/* ### Durations */
+  --dur-very-fast: 0.2s;
+  --dur-fast: 0.3s;
+  --dur-normal: 0.55s;
+  --dur-slow: 0.75s;
+
+  /* ### Margins*/
+  --margin-50: .5rem;
+  --margin-100: 1rem;
+  --margin-150: 1.5rem;
+  --margin-200: 2rem;
+  --margin-250: 2.5rem;
+  --margin-300: 2.5rem;
+  --margin-400: 3.5rem;
+  --margin-500: 4rem;
+  --margin-800: 8rem;
+
+
+  /* ### Card*/
+  --item-grid-gap: 3vw;
+  --item-cover-width: calc(100% / 5);
+  --item-cover-width-large: calc(100% / 4 - 1.75rem);
+  --item-cover-aspect-ratio: 135%;
+  --category-cover-aspect-ratio: 100%;
+}
+
+
+@media screen and (max-width: 750px) {
+  :root {
+
+
+    --page-width-padding: 3.5rem;
+
+
+    --item-grid-gap: calc(var(--page-width-padding) * .5);
+    --item-cover-width: calc(50% - var(--item-grid-gap));
+    --item-cover-width-large: calc(50% - var(--item-grid-gap));
+  } 
+}
+
+
+
+
+
+
+@media screen and (max-width: 450px) {
+  html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+  
+  *{
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+  }
+  
+  :root {
+  /* ### layOut */
+  --page-width-sm: 135rem;
+  --page-width: 200rem;
+  --page-width-padding: 1.6rem;
+  
+  
+  --nav-collapsed-width: 6rem;
+  --nav-width: 6rem;
+  
+    /* ### Font-family */
+    --ff-body: 'Poppins', sans-serif;
+  
+  
+   /* ### Letter Spacings */
+    --ls-100: -0.015em;
+  
+  
+   /* ### Line Height */
+    --lh-100:  98.5%;
+  
+   /* ### Colors
+    --clr-body: #FFF;
+    --clr-primary-1: #252525; 
+    --clr-primary-2: #FFF;
+    --clr-secondary-1: #F6F6F6;
+    --clr-secondary-2: #E6E6E6;
+    --clr-secondary-3: #E1E1E1;
+    --clr-accent-1: #FFA6A6;
+    --clr-accent-2: #E2F9B3;  
+  
+    --clr-bg-body: #FFF;
+    --clr-bg-primary-1: #252525; 
+    --clr-bg-primary-2: #FFF;
+    --clr-bg-secondary-1: #F6F6F6;
+    --clr-bg-secondary-2: #E6E6E6;
+    --clr-bg-secondary-3: #E1E1E1;
+    --clr-bg-accent-1: #FFA6A6;
+    --clr-bg-accent-2: #E2F9B3;   */
+  
+  
+  /* ### Font Sizes */
+    --fs-100: 1rem;
+    --fs-200: 1.2rem;
+    --fs-300: 1.5rem;
+    --fs-400: 1.6rem;
+    --fs-500: 1.8em;
+    --fs-600: 1.8rem;
+    --fs-700: 3rem;
+    --fs-800: 3.5rem;
+    --fs-900: 2.5rem;
+  
+   /* ### Font Weights */
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+  
+  /* ### Durations */
+    --dur-very-fast: 0.2s;
+    --dur-fast: 0.3s;
+    --dur-normal: 0.55s;
+    --dur-slow: 0.75s;
+  
+    /* ### Margins*/
+    --margin-50: .5rem;
+    --margin-100: 1rem;
+    --margin-150: 1.5rem;
+    --margin-200: 2rem;
+    --margin-250: 2.5rem;
+    --margin-300: 2.5rem;
+    --margin-400: 3.5rem;
+    --margin-500: 4rem;
+    --margin-800: 8rem;
+  }
+  
+}
+
+

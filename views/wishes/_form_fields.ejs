@@ -1,0 +1,36 @@
+
+  <div class="item-page__media">
+      <input type="file" name="cover" class="filepond">
+  </div>
+
+  <div class="">
+    <div class="form-item">
+      <label>Category</label>
+      <select name="category">
+        <% categories.forEach(category => { %>
+          <% if (category.id === wish.category) { %>
+            <option selected label="<%= category.name %>" value="<%= category.id %>">
+          <% } else { %>
+            <option label="<%= category.name %>" value="<%= category.id %>">
+          <% } %>
+        <% }) %>
+      </select>
+    </div>
+    <div class="form-item">
+      <label>Title</label>
+      <input type="text" name="title" value="<%= wish.title %>">
+    </div>
+    <div class="form-item">
+      <label>Publish Date</label>
+      <input type="date" name="publishDate"
+            value="<%= wish.publishDate == null ? '' : wish.publishDate.toISOString().split('T')[0] %>">
+    </div>
+    <div class="form-item">
+      <label>Description</label>
+      <textarea name="description"><%= wish.description %></textarea>
+    </div>
+    <div class="form-row form-row-end btn-row">
+      <a class="btn btn-danger" href="/wishes">Cancel</a>
+      <button class="btn btn-primary" type="submit">Create</button>
+    </div>
+  </div>

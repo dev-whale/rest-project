@@ -1,0 +1,19 @@
+<% itemCoverClass = locals.portrait ? 'item-card--portrait' : 'item-card--square' %>
+<% itemGridClass = locals.large ? 'item-grid-large' : '' %>
+<div class="item-grid <%= itemGridClass %>">
+  <% wishes.forEach(wish => { %>
+    <a href="/wishes/<%= wish.id %>" class="item-card  <%= itemCoverClass %>">
+      <img class="item-cover " src="<%= wish.coverImagePath %>">
+      <div class="item-card__overlay">
+        <h4><%= wish.title %></h4>
+        <strong class="item-badge">
+          <img src="/category-icons/<%= wish.category.name %>.svg">
+          <span><%= wish.category.name %></span>
+        </strong>
+      </div>
+    </a>
+  <% }) %>
+</div>
+
+
+

@@ -1,0 +1,13 @@
+<h2 class="heading--section page-width mb-400">Wishlist</h2>
+<section class="page-width">
+  <form action="/wishes" method="GET" class="form--search mb-800">
+    <div class="flex items-end">
+      <div class="input-wrapper mr-100">
+        <label>Title</label>
+        <input type="text" name="title" value="<%= searchOptions.title %>">
+      </div>
+      <button class="button button--primary" type="submit">Search</button>
+    </div>
+  </form>
+  <%- include('../partials/itemGrid', { wishes: wishes, large: true, portrait: true }) %>
+</section>

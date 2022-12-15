@@ -1,0 +1,25 @@
+<h2 class="heading--section page-width mb-400">Categories</h2>
+<section class="page-width">
+  <form action="/categories" method="GET" class="mb-800">
+    <div class="flex items-end">
+      <div class="input-wrapper mr-100">
+        <label>Title</label>
+        <input type="text" name="name" value="<%= searchOptions.name %>">
+      </div>
+      <button class="button button--primary" type="submit">Search</button>
+    </div>
+  </form>
+<ul class="custom-list item-grid">
+  <% categories.forEach(category => { %>
+    <li>
+      <a href="/categories/<%= category.id %>" class="item-card item-card--square">
+          <img class="item-cover" src="<%= category.coverImagePath %>">
+        <div class="item-card__overlay">
+          <h4><%= category.name %></h4>
+          <h4><%= category.desc %></h4>
+        </div>
+        </a>
+    </li>
+  <% }) %>
+</ul>
+</section>

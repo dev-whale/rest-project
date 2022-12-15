@@ -1,0 +1,32 @@
+
+
+<section class="page-width mb-800">
+  <h1 class="heading--section"><%= category.name %></h1>
+  <div class="flex items-center">
+    <div class="mr-200" style="max-width: 15rem;">
+      <img src="<%= category.coverImagePath %>" class="w-100" alt="">
+    </div>
+    <article class="flex items-center">
+      <p class="para" style="max-width: 85rem;"><%= category.description %></p>
+    </article>
+  </div>
+  <div class="btn-row">
+    <a class="button-icon button-icon--big bg-secondary-1 br-2 mr-100" href="/categories/<%= category.id %>/edit">
+      <svg width="34" height="36" viewBox="0 0 34 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18.1773 9.6L9.96733 18.29C9.65733 18.62 9.35733 19.27 9.29733 19.72L8.92733 22.96C8.79733 24.13 9.63733 24.93 10.7973 24.73L14.0173 24.18C14.4673 24.1 15.0973 23.77 15.4073 23.43L23.6173 14.74C25.0373 13.24 25.6773 11.53 23.4673 9.44C21.2673 7.37 19.5973 8.1 18.1773 9.6V9.6Z" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M16.807 11.05C17.0166 12.3908 17.6656 13.6241 18.652 14.5562C19.6384 15.4883 20.9064 16.0665 22.257 16.2M7.91699 28H25.917" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>  
+    </a>
+    <%- include('../partials/deleteForm',
+                { url: `/categories/${category.id}` }) %>
+  </div>
+</section>
+
+
+<div class="page-width">
+<% if (wishesByCategory.length > 0) { %>
+  <h2 class="page-header">Wishes By Category</h2>
+  <%- include('../partials/itemGrid', { wishes: wishesByCategory }) %>
+<% } %>
+
+</div>
