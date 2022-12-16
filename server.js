@@ -1,4 +1,4 @@
-require('dotenv').load()
+if (process.env.NODE_ENV !== 'production') {require('dotenv').load()}
 
 
 // ===== Importuejmy biblioteki  =====
