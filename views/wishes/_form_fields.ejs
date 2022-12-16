@@ -17,7 +17,7 @@
       </select>
     </div>
     <div class="form-item">
-      <label>Title</label>
+      <label class="para">Title</label>
       <input type="text" name="title" value="<%= wish.title %>">
     </div>
     <div class="form-item">
@@ -25,12 +25,12 @@
       <input type="date" name="publishDate"
             value="<%= wish.publishDate == null ? '' : wish.publishDate.toISOString().split('T')[0] %>">
     </div>
-    <div class="form-item">
+    <div class="form-item mb-150">
       <label>Description</label>
       <textarea name="description"><%= wish.description %></textarea>
     </div>
     <div class="form-row form-row-end btn-row">
-      <a class="btn btn-danger" href="/wishes">Cancel</a>
-      <button class="btn btn-primary" type="submit">Create</button>
+      <a class="button button-primary bg-accent-1 mr-100" href="/wishes">Cancel</a>
+      <button class="button button-primary bg-accent-2" type="submit">Create</button>
     </div>
   </div>

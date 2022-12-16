@@ -4,14 +4,14 @@ const Category = require('../models/category')
 const Wish = require('../models/wish')
 const imageMimeTypes = ['image/jpeg', 'image/png', 'images/gif']
 
-// All Categories Route
+
 router.get('/', async (req, res) => {
   let searchOptions = {}
   if (req.query.name != null && req.query.name !== '') {
     searchOptions.name = new RegExp(req.query.name, 'i')
   }
   try {
-    const categories = await Category.find(searchOptions)
+    const categories = await Category.find(searchOptions).populate('category')
     res.render('categories/index', {
       categories: categories,
       searchOptions: req.query
@@ -21,12 +21,12 @@ router.get('/', async (req, res) => {
   }
 })
 
-// New Category Route
+
 router.get('/new', (req, res) => {
   res.render('categories/new', { category: new Category() })
 })
 
-// Create Category Route
+
 router.post('/', async (req, res) => {
   const category = new Category({
     name: req.body.name,

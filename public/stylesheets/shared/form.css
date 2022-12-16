@@ -33,16 +33,20 @@
   flex-direction: column;
   flex-grow: 1;
   flex-basis: 0;
+  margin-bottom: 2rem;
 }
 
 
 .form-item > label {
-  font-size: var(--form-label-font-size);
-  margin-bottom: .25rem;
-  margin-left: .25rem;
+  color: var(--clr-primary-1);
+	margin-bottom: .25rem;
+	margin-left: .25rem;
+	font-size: 1.7rem;
+	margin-bottom: 1.5rem;
 }
 
-input {
+input,textarea,select {
+  color: var(--clr-primary-1);
 	background-color: var(--clr-bg-secondary-1);
 	font-size: var(--fs-400) !important;
 	padding: 1rem 2rem;
@@ -53,3 +57,7 @@ input {
 	font-family: var(--ff-body);
 }
 
+
+.filepond--panel.filepond--panel-root {
+	background: var(--clr-bg-secondary-1) !important;
+}

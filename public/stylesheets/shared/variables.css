@@ -97,9 +97,9 @@ html{
 
 
   /* ### Card*/
-  --item-grid-gap: 3vw;
-  --item-cover-width: calc(100% / 5);
-  --item-cover-width-large: calc(100% / 4 - 1.75rem);
+  --item-grid-gap: 1.5rem;
+  --item-cover-width: calc(100% / 5 - var(--item-grid-gap) * 2);
+  --item-cover-width-large: calc(100% / 4 - var(--item-grid-gap) * 2);
   --item-cover-aspect-ratio: 135%;
   --category-cover-aspect-ratio: 100%;
 }

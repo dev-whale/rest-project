@@ -22,7 +22,7 @@ categorySchema.pre('remove', function(next) {
     if (err) {
       next(err)
     } else if (wishes.length > 0) {
-      next(new Error('This category has wishes still'))
+      next(new Error('This category is not empty'))
     } else {
       next()
     }

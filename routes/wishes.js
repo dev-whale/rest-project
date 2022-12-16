@@ -27,12 +27,12 @@ router.get('/', async (req, res) => {
   }
 })
 
-// New Wish Route
+
 router.get('/new', async (req, res) => {
   renderNewPage(res, new Wish())
 })
 
-// Create Wish Route
+
 router.post('/', async (req, res) => {
   const wish = new Wish({
     title: req.body.title,
@@ -51,7 +51,7 @@ router.post('/', async (req, res) => {
   }
 })
 
-// Show Wish Route
+
 router.get('/:id', async (req, res) => {
   try {
     const wish = await Wish.findById(req.params.id).populate('category').exec()
@@ -61,7 +61,7 @@ router.get('/:id', async (req, res) => {
   }
 })
 
-// Edit Wish Route
+
 router.get('/:id/edit', async (req, res) => {
   try {
     const wish = await Wish.findById(req.params.id)
@@ -71,7 +71,7 @@ router.get('/:id/edit', async (req, res) => {
   }
 })
 
-// Update Wish Route
+
 router.put('/:id', async (req, res) => {
   let wish
 
@@ -96,7 +96,7 @@ router.put('/:id', async (req, res) => {
   }
 })
 
-// Delete Wish Page
+
 router.delete('/:id', async (req, res) => {
   let wish
   try {

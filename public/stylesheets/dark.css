@@ -11,7 +11,7 @@
     --clr-body: #252525;
     --clr-bg-primary-1: #474747; 
     --clr-bg-primary-2: #252525;
-    --clr-bg-secondary-1: #F6F6F6;
+    --clr-bg-secondary-1: #474747;
     --clr-bg-secondary-2: #E6E6E6;
     --clr-bg-secondary-3: #474747;
     --clr-bg-accent-1: #FFA6A6;
@@ -24,6 +24,9 @@
   }
   
   
+  .filepond--drop-label.filepond--drop-label label{
+    color: var(--clr-primary-1)!important;
+  }
   
   
   
